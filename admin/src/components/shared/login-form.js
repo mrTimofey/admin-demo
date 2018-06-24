@@ -4,7 +4,7 @@ import base from 'vue-admin-front/src/components/shared/login-form.vue';
 export default {
 	extends: base,
 	created() {
-		this.data.form.login = 'admin@admin.com';
-		this.data.form.password = 'secret';
+		this.form.login = 'admin@admin.com';
+		this.form.password = 'secret';
 	}
 }
