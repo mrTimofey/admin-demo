@@ -11,4 +11,8 @@ class Kernel extends ConsoleKernel {
 		/** @noinspection PhpIncludeInspection */
 		require base_path('routes/console.php');
 	}
+
+	protected function schedule(Schedule $schedule): void {
+		$schedule->command('reset', ['--hard'])->dailyAt('03:00');
+	}
 }
