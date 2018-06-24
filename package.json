@@ -1,0 +1,14 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "concurrently --kill-others -n \"admin, api \" -c \"green,gray\" \"npm run admin:dev\" \"php artisan serve\"",
+        "admin:dev": "node node_modules/vue-admin-front/index.js",
+        "admin:build": "rm -rf public/admin-dist && NODE_ENV=production webpack --config node_modules/vue-admin-front/webpack.config.js --progress --hide-modules"
+    },
+    "dependencies": {
+        "vue-admin-front": "^1.1.0"
+    },
+    "devDependencies": {
+        "concurrently": "^3.6.0"
+    }
+}
