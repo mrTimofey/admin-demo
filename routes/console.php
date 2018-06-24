@@ -19,8 +19,8 @@ $this->command('reset {--hard}', function(bool $hard, \Illuminate\Foundation\Con
 		$fs->cleanDirectory(\MrTimofey\LaravelAioImages\ImageModel::getUploadPath());
 	}
 	$console->call('down', [], $this->output);
-	$console->call('migrate:fresh', ['--force'], $this->output);
-	$console->call('db:seed', [], $this->output);
+	$console->call('migrate:fresh', ['--force' => true], $this->output);
+	$console->call('db:seed', ['--force' => true], $this->output);
 	$console->call('make:user', [], $this->output);
 	$console->call('up', [], $this->output);
 });
