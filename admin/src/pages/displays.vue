@@ -196,8 +196,8 @@
 		.box: .box-body.table-responsive.no-padding
 			table.table.table-bordered
 				thead: tr
-					th Field type
-					th Display
+					th Display type
+					th Appearance
 					th Component props
 				tbody
 					tr(v-for="item in items")
