@@ -111,7 +111,7 @@
 				{
 					title: 'Key-value pairs',
 					props: {
-						type: 'meta',
+						type: 'key-value',
 						value: null
 					}
 				},
