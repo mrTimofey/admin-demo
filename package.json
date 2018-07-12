@@ -4,7 +4,7 @@
         "dev": "concurrently --kill-others -n \"admin, api \" -c \"green,gray\" \"npm run admin:dev\" \"php artisan serve\"",
         "admin:dev": "node node_modules/vue-admin-front/index.js",
         "admin:build": "rm -rf public/admin-dist && NODE_ENV=production webpack --config node_modules/vue-admin-front/webpack.config.js",
-        "update": "./artisan down && git pull && composer install --no-dev && npm i && npm run admin:build && ./artisan up"
+        "update": "./artisan down && git checkout package-lock.json && git pull && composer install --no-dev && npm i && npm run admin:build && ./artisan up"
     },
     "devDependencies": {
         "concurrently": "^3.6.0",
