@@ -6,11 +6,9 @@
         "admin:build": "rm -rf public/admin-dist && NODE_ENV=production webpack --config node_modules/vue-admin-front/webpack.config.js",
         "update": "./artisan down && git pull && composer install --no-dev && npm i && npm run admin:build && ./artisan up"
     },
-    "dependencies": {
-        "vue-admin-front": "^1.1.2"
-    },
     "devDependencies": {
         "concurrently": "^3.6.0",
-        "webpack-command": "^0.2.1"
+        "vue-admin-front": "^1.1.4",
+        "webpack-command": "^0.4.1"
     }
 }
