@@ -13,7 +13,7 @@ class Album extends Model implements ConfiguresAdminHandler {
 	use Sluggable;
 
 	public function images(): BelongsToMany {
-		return $this->belongsToMany(ImageModel::class, 'album_image');
+		return $this->belongsToMany(ImageModel::class, 'album_image')->orderBy('album_image.sort');
 	}
 
 	public function configureAdminHandler(ModelHandler $handler): void {
