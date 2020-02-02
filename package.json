@@ -3,13 +3,13 @@
     "scripts": {
         "dev": "concurrently --kill-others -n \"admin, api \" -c \"green,gray\" \"npm run admin:dev\" \"php artisan serve\"",
         "admin:dev": "node node_modules/vue-admin-front/index.js",
-        "admin:build": "rm -rf public/admin-dist && NODE_ENV=production webpack --config node_modules/vue-admin-front/webpack.config.js",
+        "admin:build": "rm -rf public/admin-dist && NODE_ENV=production wp --config node_modules/vue-admin-front/webpack.config.js",
         "update": "./artisan down && git checkout package-lock.json && git pull && composer install --no-dev && npm i && npm run admin:build && ./artisan up"
     },
     "devDependencies": {
-        "concurrently": "^3.6.0",
-        "vue-admin-front": "^1.1.4",
-        "webpack": "^4.16.0",
-        "webpack-command": "^0.4.1"
+        "concurrently": "^3.6.1",
+        "vue-admin-front": "^1.3.0-beta3",
+        "webpack": "^4.41.5",
+        "webpack-nano": "^0.8.1"
     }
 }
