@@ -7,9 +7,9 @@
         "update": "./artisan down && git checkout package-lock.json && git pull && composer install --no-dev && npm i && npm run admin:build && ./artisan up"
     },
     "devDependencies": {
-        "concurrently": "^3.6.1",
-        "vue-admin-front": "^1.3.0-beta3",
-        "webpack": "^4.41.5",
-        "webpack-nano": "^0.8.1"
+        "concurrently": "^5.3.0",
+        "vue-admin-front": "^1.3.0-beta4",
+        "webpack": "^4.44.1",
+        "webpack-nano": "^1.0.0"
     }
 }
