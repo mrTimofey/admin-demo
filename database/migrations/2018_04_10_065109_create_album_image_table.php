@@ -8,7 +8,7 @@ class CreateAlbumImageTable extends Migration {
 	public function up(): void {
 		Schema::create('album_image', function(Blueprint $table) {
 			$table->unsignedInteger('album_id');
-			$table->unsignedInteger('image_id');
+			$table->string('image_id');
 			$table->smallInteger('sort')->default(0);
 			$table->primary(['album_id', 'image_id']);
 			$table->foreign('album_id')->references('id')->on('albums')->onDelete('cascade');
